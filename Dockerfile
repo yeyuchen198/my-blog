@@ -12,7 +12,7 @@ COPY nginx/default.conf /etc/nginx/nginx.conf
 
 
 
-EXPOSE 80
+EXPOSE 10000
 
 #run nginx when start container
 #ENTRYPOINT /usr/local/nginx/sbin/nginx && tail -f /etc/passwd
