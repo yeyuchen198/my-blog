@@ -24,4 +24,5 @@ EXPOSE 80
 ADD run.sh /
 RUN chmod +x /run.sh
 
-CMD /usr/local/nginx/sbin/nginx && /run.sh
+# CMD /usr/local/nginx/sbin/nginx && /run.sh
+CMD /run.sh
