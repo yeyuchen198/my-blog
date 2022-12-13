@@ -1,13 +1,17 @@
-FROM nginx:1.19.3-alpine AS builder
+FROM yuchen168/blog AS builder
+# ENV TZ=Asia/Shanghai
 
-FROM yuchen168/blog
-ENV TZ=Asia/Shanghai
 
-CMD whereis nginx
 
-COPY --from=builder /usr/sbin/nginx /usr/local/nginx/sbin/nginx
-# /usr/sbin/nginx
-COPY --from=builder /etc/nginx /etc/nginx
+FROM nginx:1.19.3-alpine
+COPY --from=builder /usr/bin/xray /usr/bin/xray
+
+
+# CMD whereis nginx
+
+# COPY --from=builder /usr/sbin/nginx /usr/local/nginx/sbin/nginx
+# # /usr/sbin/nginx
+# COPY --from=builder /etc/nginx /etc/nginx
 
 COPY nginx/default.conf /etc/nginx/nginx.conf
 
