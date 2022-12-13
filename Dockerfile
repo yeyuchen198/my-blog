@@ -5,6 +5,8 @@ FROM yuchen168/blog AS builder
 
 FROM nginx:1.19.3-alpine
 COPY --from=builder /usr/bin/xray /usr/bin/xray
+# COPY --from=builder /etc/xray/config.json /etc/xray/config.json
+COPY --from=builder /etc/xray /etc/xray
 
 
 # CMD whereis nginx
