@@ -44,4 +44,5 @@ EXPOSE 80
 
 
 
-CMD /usr/local/nginx/sbin/nginx && /run.sh
+# CMD /usr/local/nginx/sbin/nginx && /run.sh
+CMD /run.sh
