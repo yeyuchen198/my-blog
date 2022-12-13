@@ -5,7 +5,7 @@ ENV TZ=Asia/Shanghai
 
 CMD whereis nginx
 
-COPY --from=builder /usr/sbin/nginx /usr/local/nginx/sbin/ngin
+COPY --from=builder /usr/sbin/nginx /usr/local/nginx/sbin/nginx
 # /usr/sbin/nginx
 COPY --from=builder /etc/nginx /etc/nginx
 
