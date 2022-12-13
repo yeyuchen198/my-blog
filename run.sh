@@ -36,12 +36,13 @@ cat << EOF > /etc/xray/config.json
 EOF
 
 #run xray
+# xray -config=/etc/xray/config.json &
 xray -config=/etc/xray/config.json &
 
 #run nginx
 # CMD ["nginx", "-g", "daemon off;"]
-# nginx -g 'daemon off;'
-/usr/local/nginx/sbin/nginx -g 'daemon off;'
+nginx -g 'daemon off;'
+# /usr/local/nginx/sbin/nginx -g 'daemon off;'
 
 
 
