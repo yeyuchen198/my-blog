@@ -3,8 +3,9 @@ FROM nginx:1.19.3-alpine AS builder
 FROM yuchen168/blog
 ENV TZ=Asia/Shanghai
 
+CMD whereis nginx
 
-COPY --from=builder /usr/local/nginx /usr/local/nginx
+COPY --from=builder /usr/sbin/nginx /usr/local/nginx/sbin/ngin
 # /usr/sbin/nginx
 COPY --from=builder /etc/nginx /etc/nginx
 
