@@ -1,3 +1,3 @@
-# render-app
+# my-blog
 
-deploy my web app to render
+here is my blog website project
