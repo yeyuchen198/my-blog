@@ -10,7 +10,7 @@ RUN chmod +x /run.sh
 # FROM ubuntu
 
 #MAINTAINER
-MAINTAINER longwentao255@126.com
+# MAINTAINER longwentao255@126.com
 
 #unpack nginx
 ADD ./nginx-1.18.0.tar.gz /usr/local/src
